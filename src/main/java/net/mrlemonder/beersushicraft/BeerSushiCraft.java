@@ -17,6 +17,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.mrlemonder.beersushicraft.item.ModCreativeModeTab;
 import net.mrlemonder.beersushicraft.item.ModItems;
 import org.slf4j.Logger;
 
@@ -31,6 +32,8 @@ public class BeerSushiCraft
     public BeerSushiCraft()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativeModeTab.register(modEventBus);
 
         ModItems.register(modEventBus);
 

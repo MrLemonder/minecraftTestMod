@@ -17,6 +17,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.mrlemonder.beersushicraft.block.ModBlocks;
 import net.mrlemonder.beersushicraft.item.ModCreativeModeTab;
 import net.mrlemonder.beersushicraft.item.ModItems;
 import org.slf4j.Logger;
@@ -35,7 +36,15 @@ public class BeerSushiCraft
 
         ModCreativeModeTab.register(modEventBus);
 
+        // Register mods items
         ModItems.register(modEventBus);
+
+        // Register mods blocks
+        ModBlocks.register(modEventBus);
+
+        // TO DO:
+        //Register mod liquids
+        //ModLiquids.register(modEventBus);
 
         // Register the commonSetup method for mod loading
         modEventBus.addListener(this::commonSetup);

@@ -1,4 +1,7 @@
 {
   "item.beersushicraft.beer": "Beer",
+
+  "block.beersushicraft.hops_block": "Block of Hops",
+
   "creativetab.beer_sushi_tab": "Beer Tab"
 }

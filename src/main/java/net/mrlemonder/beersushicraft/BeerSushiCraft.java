@@ -1,7 +1,8 @@
-package net.mrlemonder.beersushimod;
+package net.mrlemonder.beersushicraft;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -16,19 +17,34 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.mrlemonder.beersushicraft.block.ModBlocks;
+import net.mrlemonder.beersushicraft.item.ModCreativeModeTab;
+import net.mrlemonder.beersushicraft.item.ModItems;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(BeerSushiMod.MOD_ID)
-public class BeerSushiMod
+@Mod(BeerSushiCraft.MOD_ID)
+public class BeerSushiCraft
 {
     // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "beer_sushi_craft";
+    public static final String MOD_ID = "beersushicraft";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
-    public BeerSushiMod()
+    public BeerSushiCraft()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativeModeTab.register(modEventBus);
+
+        // Register mods items
+        ModItems.register(modEventBus);
+
+        // Register mods blocks
+        ModBlocks.register(modEventBus);
+
+        // TO DO:
+        //Register mod liquids
+        //ModLiquids.register(modEventBus);
 
         // Register the commonSetup method for mod loading
         modEventBus.addListener(this::commonSetup);
@@ -59,7 +75,10 @@ public class BeerSushiMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-
+        if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS)
+        {
+            event.accept(ModItems.BEER);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

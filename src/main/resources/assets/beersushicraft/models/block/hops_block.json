@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "beersushicraft:block/hops_block"
+    "end": "beersushicraft:block/hops_block_top",
+    "side": "beersushicraft:block/hops_block"
   }
 }

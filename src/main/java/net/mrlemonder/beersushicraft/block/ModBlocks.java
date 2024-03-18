@@ -1,11 +1,13 @@
 package net.mrlemonder.beersushicraft.block;
 
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Instruments;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -21,7 +23,7 @@ public class ModBlocks
             DeferredRegister.create(ForgeRegistries.BLOCKS, BeerSushiCraft.MOD_ID);
 
     public static final RegistryObject<Block> HOPS_BLOCK = registerBlock("hops_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.CHERRY_LEAVES)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
     public static void register(IEventBus eventBus)
     {

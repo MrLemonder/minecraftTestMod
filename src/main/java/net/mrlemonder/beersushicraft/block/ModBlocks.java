@@ -1,5 +1,6 @@
 package net.mrlemonder.beersushicraft.block;
 
+<<<<<<< HEAD
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Instruments;
@@ -10,6 +11,14 @@ import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+=======
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+>>>>>>> 293b42575e0f9528c1cc9f24b2d18401e801215c
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -24,6 +33,7 @@ public class ModBlocks
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, BeerSushiCraft.MOD_ID);
 
+<<<<<<< HEAD
     //================= BLOCKS REGISTRY ===================//
     public static final RegistryObject<Block> HOPS_BLOCK = registerBlock("hops_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
@@ -36,6 +46,11 @@ public class ModBlocks
                     .strength(3f).requiresCorrectToolForDrops(), UniformInt.of(3,6)));
 
     //================= REG METHODS ===================//
+=======
+    public static final RegistryObject<Block> HOPS_BLOCK = registerBlock("hops_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.CHERRY_LEAVES)));
+
+>>>>>>> 293b42575e0f9528c1cc9f24b2d18401e801215c
     public static void register(IEventBus eventBus)
     {
         BLOCKS.register(eventBus);

@@ -20,10 +20,16 @@ public class ModCreativeModeTab {
                     .title(Component.translatable("creativetab.beer_sushi_tab"))
                     .displayItems((itemDisplayParameters, output) ->
                     {
+                        //Adding items
                         output.accept(ModItems.BEER.get());
+                        output.accept(ModItems.METAL_DETECTOR.get());
+
+                        //Adding blocks
                         output.accept(ModBlocks.HOPS_BLOCK.get());
                         output.accept(ModBlocks.TEST_ORE.get());
                         output.accept(ModBlocks.TEST_ORE_DEEPSLATE.get());
+
+                        //Adding fluids?
                     })
                     .build());
 

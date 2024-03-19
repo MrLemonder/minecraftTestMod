@@ -12,9 +12,11 @@ public class ModItems
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, BeerSushiCraft.MOD_ID);
 
+    //================= ITEM REGISTRY ===================//
     public static final RegistryObject<Item> BEER = ITEMS.register("beer",
             () -> new Item(new Item.Properties()));
 
+    //================= REG METHODS ===================//
     public static void register(IEventBus eventBus)
     {
         ITEMS.register(eventBus);

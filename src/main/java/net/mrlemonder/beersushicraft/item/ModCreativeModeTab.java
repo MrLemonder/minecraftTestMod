@@ -22,6 +22,8 @@ public class ModCreativeModeTab {
                     {
                         output.accept(ModItems.BEER.get());
                         output.accept(ModBlocks.HOPS_BLOCK.get());
+                        output.accept(ModBlocks.TEST_ORE.get());
+                        output.accept(ModBlocks.TEST_ORE_DEEPSLATE.get());
                     })
                     .build());
 

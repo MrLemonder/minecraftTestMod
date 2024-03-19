@@ -1,6 +1,7 @@
 {
   "values":
           [
-            
+            "beersushicraft:test_ore",
+            "beersushicraft:test_ore_deepslate"
           ]
 }

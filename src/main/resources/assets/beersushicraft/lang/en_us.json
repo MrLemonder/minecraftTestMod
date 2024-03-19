@@ -2,6 +2,8 @@
   "item.beersushicraft.beer": "Beer",
 
   "block.beersushicraft.hops_block": "Block of Hops",
+  "block.beersushicraft.test_ore": "Test Block",
+  "block.beersushicraft.test_ore_deepslate": "Deepslate Test Block",
 
   "creativetab.beer_sushi_tab": "Beer Tab"
 }

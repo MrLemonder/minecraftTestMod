@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "beersushicraft:hops_block"
+    }
+  ],
+  "result":
+  {
+    "item": "beersushicraft:beer",
+    "count": 9
+  }
+}

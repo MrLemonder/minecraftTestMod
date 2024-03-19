@@ -10,7 +10,7 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.Tags;
+import net.mrlemonder.beersushicraft.util.ModTags;
 
 public class MetalDetectorItem extends Item {
     public MetalDetectorItem(Properties pProperties) {
@@ -58,6 +58,6 @@ public class MetalDetectorItem extends Item {
 
     private boolean IsValuableBlock(BlockState state)
     {
-        return state.is(Blocks.DIAMOND_ORE) || state.is(Blocks.IRON_ORE) || state.is(Blocks.DEEPSLATE_DIAMOND_ORE) || state.is(Blocks.DEEPSLATE_IRON_ORE);
+        return state.is(ModTags.Blocks.METAL_DETECTOR_VALUABLES);
     }
 }

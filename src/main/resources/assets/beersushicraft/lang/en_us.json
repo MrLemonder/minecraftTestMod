@@ -1,15 +1,12 @@
 {
   "item.beersushicraft.beer": "Beer",
-<<<<<<< HEAD
   "item.beersushicraft.metal_detector": "Beer Detector",
 
   "block.beersushicraft.hops_block": "Block of Hops",
   "block.beersushicraft.test_ore": "Test Block",
   "block.beersushicraft.test_ore_deepslate": "Deepslate Test Block",
-=======
 
   "block.beersushicraft.hops_block": "Block of Hops",
->>>>>>> 293b42575e0f9528c1cc9f24b2d18401e801215c
 
   "creativetab.beer_sushi_tab": "Beer Tab"
 }

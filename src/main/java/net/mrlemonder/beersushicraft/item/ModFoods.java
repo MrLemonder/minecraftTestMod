@@ -10,7 +10,7 @@ public class ModFoods
             .nutrition(3)
             .saturationMod(.4f)
             .effect(
-                    () -> new MobEffectInstance(MobEffects.WEAKNESS, 60),
+                    () -> new MobEffectInstance(MobEffects.HUNGER, 60),
             .7f
             ).build();
 }
